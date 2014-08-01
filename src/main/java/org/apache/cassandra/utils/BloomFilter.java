@@ -27,7 +27,7 @@ public abstract class BloomFilter implements IFilter
 {
     private static final ThreadLocal<long[]> reusableIndexes = new ThreadLocal<long[]>()
     {
-        protected long[] initialValue()
+        @Override protected long[] initialValue()
         {
             return new long[21];
         }
